@@ -1,0 +1,4 @@
+//para hacer package JSON 
+tsc --init
+
+//luego en el oudir se pone donde va estar el directorio que va ser el archivo de javascrypt
