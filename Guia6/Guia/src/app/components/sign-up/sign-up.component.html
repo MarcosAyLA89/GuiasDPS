@@ -1,0 +1,64 @@
+
+<div class="jumbotron">
+  <h1 class="display-3">Sign-Up</h1>
+  <p class="lead">Here you can create an account with your email or have a easy access with google acount</p>
+  <hr class="my-4">
+  <p>take care always with you personal information do not divulgate to other one</p>
+<div class="displayTable">
+    <div class="displayTableCell">
+  
+      <div class="authBlock">
+        <h3>Sign Up</h3>
+  
+        <div class="formGroup">
+          <input type="email" class="formControl" placeholder="Email Address" #userEmail required>
+        </div>
+  
+        <div class="formGroup">
+          <input type="password" class="formControl" placeholder="Password" #userPwd required>
+        </div>
+  
+        <div class="formGroup">
+          <input type="button" class="btn btn-outline-info" value="Sign Up" (click)="authService.SignUp(userEmail.value, userPwd.value)">
+        </div>
+  
+        <div class="formGroup">
+          <span class="or"><span class="orInner">Or</span></span>
+        </div>
+  
+        <!-- Continue with Google -->
+        <div class="formGroup">
+          <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
+            <i class="fab fa-google-plus-g"></i>
+            Continue with Google
+          </button>
+        </div>
+  
+        <!-- Continue with Facebook -->
+        <div class="formGroup">
+          <button type="button" class="btn facebookBtn" (click)="authService.FacebookAuth()">
+            <i class="fab fa-facebook"></i>
+            Continue with Facebook
+          </button>
+        </div>
+       <!-- Continue with Twitter -->
+        <div class="formGroup"> 
+          <button type="button" class="btn facebookBtn" (click)="authService.TwitterAuth()">
+            <i class="fab fa-twitter"></i>
+            Continue with Twitter
+          </button>
+        </div>
+      </div>
+  
+      <div class="redirectToLogin">
+        <span>Already have an account? <button class="btn btn-outline-primary" routerLink="/sign-in">Log In</button></span>
+      </div>
+    </div>
+  
+  </div>
+
+  
+</div>
+
+
+
